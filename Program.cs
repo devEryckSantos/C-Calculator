@@ -1,5 +1,20 @@
 ﻿
-Divisao();
+Menu();
+
+static void Menu()
+{
+    Console.Clear();
+    Console.WriteLine("          C# Calculator");
+    Console.WriteLine("==================================");
+    Console.WriteLine("Escolha uma operação:");
+    Console.WriteLine("1 - Soma");
+    Console.WriteLine("2 - Subtração");
+    Console.WriteLine("3 - Multiplicação");
+    Console.WriteLine("4 - Divisão");
+    Console.WriteLine("5 - Sair");
+    Console.WriteLine("==================================");
+    short op = short.Parse(Console.ReadLine());
+}
 
 static void Soma()
 {
@@ -12,6 +27,9 @@ static void Soma()
 
     double result = v1 + v2;
     Console.WriteLine($"{v1} + {v2} = {result}");
+    Console.ReadLine();
+
+    Menu();
 
 }
 
@@ -26,6 +44,9 @@ static void Subtracao()
 
     double result = v1 - v2;
     Console.WriteLine($"{v1} - {v2} = {result}");
+    Console.ReadLine();
+
+    Menu();
 }
 
 static void Multiplicacao()
@@ -39,6 +60,9 @@ static void Multiplicacao()
 
     double result = v1 * v2;
     Console.WriteLine($"{v1} x {v2} = {result}");
+    Console.ReadLine();
+
+    Menu();    
 }
 
 static void Divisao()
@@ -52,4 +76,7 @@ static void Divisao()
 
     double result = v1 / v2;
     Console.WriteLine($"{v1} ÷ {v2} = {result}");
+    Console.ReadLine();
+
+    Menu();
 }

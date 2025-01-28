@@ -14,6 +14,16 @@ static void Menu()
     Console.WriteLine("5 - Sair");
     Console.WriteLine("==================================");
     short op = short.Parse(Console.ReadLine());
+
+    switch (op)
+    {
+        case 1: Soma(); break;
+        case 2: Subtracao(); break;
+        case 3: Multiplicacao(); break;
+        case 4: Divisao(); break;
+        case 5: Environment.Exit(0); break;
+        default: Console.WriteLine("Opção inválida! Escolha uma dentre as opções no Menu."); Console.ReadKey(); Menu(); break;
+    }    
 }
 
 static void Soma()
